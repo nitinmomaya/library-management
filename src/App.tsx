@@ -1,12 +1,24 @@
-
 import './App.css'
+import {BrowserRouter, Route, Routes} from 'react-router-dom'
+import Login from '../Components/Login/Login';
+import Home from '../Components/Home';
 
-function App() {
+const App : React.FC = () => {
+  
 
   return (
-    <>
-        <h1>Grand ABC Libriarian CUURENT 12</h1>
-    </>
+    <div style={{
+      width: '100%',
+      height: "100%",
+    }}>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login/>} />
+          <Route path='/home' element ={<Home />} />
+        </Routes>
+      </BrowserRouter>
+      
+    </div>
   )
 }
 

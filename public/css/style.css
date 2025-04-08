@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.input-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-container input {
+    width: 400px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 5px;
+    color: #aaa;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+    top: -3px;
+    left: 10px;
+    color: #66afe9;
+    font-size: 12px;
+}
+
+/* select */
+
+.select-container {
+    position: relative;
+    margin: 20px 0;
+}
+
+.select-container select {
+    width: 400px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    appearance: none;
+    background: none;
+}
+
+.select-container label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 5px;
+    color: #aaa;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+.select-container select:focus + label,
+.select-container select:not([value=""]) + label {
+    top: -10px;
+    left: 10px;
+    color: #66afe9;
+}
+
+.link {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+}
+
+.head-text {
+    color: 'black';
+    justify-content: 'center';
+    align-items: 'center';
+    width: '100%';
+    font-size: '24px';
+    font-weight: 800;
+}
