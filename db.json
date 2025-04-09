@@ -17,7 +17,7 @@
         "password": "password456"
       }
     ],
-    "studentbooklist": [
+    "booklist": [
       {
         "id": 1,
         "bookname": "Introduction to Algorithms",

@@ -1,25 +1,9 @@
-import './App.css'
-import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import Login from '../Components/Login/Login';
-import Home from '../Components/Home';
+import React from 'react';
+// import AppRoutes from './routes/Routes';
 
-const App : React.FC = () => {
-  
+const App: React.FC = () => {
+  // return <AppRoutes />;
+  return <></>
+};
 
-  return (
-    <div style={{
-      width: '100%',
-      height: "100%",
-    }}>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Login/>} />
-          <Route path='/home' element ={<Home />} />
-        </Routes>
-      </BrowserRouter>
-      
-    </div>
-  )
-}
-
-export default App
+export default App;
