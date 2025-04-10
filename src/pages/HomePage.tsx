@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useMemo, useState } from 'react';
 // import API from '../api/axios';
 import { Button, FormControl, InputLabel, MenuItem } from '@mui/material';
