@@ -43,8 +43,7 @@ API.interceptors.response.use(
                 // const refreshResponse = await axios.post('http://localhost:3000/refresh',{},
                 //     {withCredentials: true}
                 // );
-                const refreshResponse = await axios.get('http://localhost:3000/userList',{});
-                accessToken = refreshResponse.data.accessToken || 'dummyToken';
+                accessToken = 'dummyToken';
                 setAccessToken(accessToken);
                 originalRequest.headers['Authorization'] = `Bearer ${accessToken}`;
                 return API(originalRequest);
