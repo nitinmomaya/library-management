@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react'
 import Select from '../components/Select/Select'
 import axios from 'axios';
+import Search from '../components/Search/Search';
+import Sidebar from '../components/Sidebar/Sidebar';
 
 const Borrow = () => {
     //get user details
@@ -53,18 +55,17 @@ const Borrow = () => {
 
     }
 
-    useEffect(()=>{
-      getData();
-    },[search,selectType])
+    // useEffect(()=>{
+    //   getData();
+    // },[search,selectType])
 
 console.log(isMember?'name':'bookname')
 
   return (
    <>
-    <div>Borrow</div>
+
     <Select value={selectType} setValue={setSelectType} options={[{value:'member'},{value:'book'}]}/>
-    <input type={'text'} value={search} onChange={(e)=>setSearch(e.target.value)}/>
-    <button onClick={()=>getData()}>search</button>
+    <Search value={search} onChange={(e)=>setSearch(e.target.value)} placeholder={'search by member or book'} onSubmit={getData}/>
     {filterData.map((item:any)=><div>{item[!isMember?'name':'bookname']}</div>)}
    </>
   )
