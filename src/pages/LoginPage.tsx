@@ -26,7 +26,7 @@ const LoginPage: React.FC = () => {
 
   const handleSubmit = (values: LoginFormValues) => {
     dispatch(login(values)).then(()=>{
-        navigate('/home')
+        navigate('/')
     });
   };
 

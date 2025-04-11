@@ -8,8 +8,9 @@ const Sidebar = () => {
     
    
     const checkUser:any=useAuth();
-    const isUser= checkUser?.role==='user';
-    const filterSidebar=  isUser?sideBar.filter(item=>item.role===('user')|| item.role===('both')):sideBar.filter(item=>item.role===('admin')|| item.role===('both'))
+    const isUser= checkUser?.user?.role ==='student';
+    const filterSidebar=  isUser?sideBar.filter(item=>(item.role===('student')|| item.role===('both'))):sideBar.filter(item=>item.role===('admin')|| item.role===('both'));
+    console.log(filterSidebar,checkUser,isUser)
   return (
    <>
     <div className="sidebarcontainer">

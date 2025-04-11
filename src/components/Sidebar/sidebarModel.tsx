@@ -7,7 +7,7 @@ export const sideBar=[
 
     { value: 'My Borrow Book',
         route: 'my-borrow-book',
-        role:'user',
+        role:'student',
     },
 
     { value: 'borrow Book',

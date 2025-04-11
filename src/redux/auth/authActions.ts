@@ -13,6 +13,8 @@ export const login = (values: LoginFormValues) => {
         const loggedUser = response.data.find((user: User) => user.email === values.email && user.password === values.password);
         if (loggedUser){
             setAccessToken(response.data.accessToken || 'dummyToken');
+            //comment below code after nodejs backend as cookie setup done.
+            localStorage.setItem('loggedLibraryUser', JSON.stringify({ loggedUser: loggedUser as User, accessToken: 'dummyToken' }));
         }
         dispatch({ type: LOGIN_SUCCESS, payload: loggedUser as User });
         } catch (err) {
